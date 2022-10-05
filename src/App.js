@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import TodoTable from './TodoTable';
 
 function App() {
   const [todo, setTodo] = React.useState({description:'', date:''});
@@ -12,13 +13,11 @@ function App() {
       event.preventDefault();
       setTodos([...todos, todo]);
     };
-
-  const remove = (todo) => {
+  const removeTodo = (todo) => {
       console.log(todo);
       let filteredArr = todos.filter((el) => el!== todo);
       setTodos(filteredArr);
     };
-  
   
   return (
     <div className="App">
@@ -43,19 +42,7 @@ function App() {
       <table>
         <h4 class="eka">Date:</h4>
         <h4 class="toka">Description: </h4>
-        <tbody>
-          {todos.map((todo, index) =>
-            <tr key={index}>
-              <td>
-                {todo.description}
-              </td>
-              <td>
-                {todo.date}
-              </td>
-              <button onClick={() => remove(todo)}>Delete</button>
-            </tr>
-          )}
-        </tbody>
+        <TodoTable todos={todos} removeTodo={removeTodo} />
       </table>
     </div>
   );

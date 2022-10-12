@@ -11,9 +11,11 @@ header {
   color:rgb(129, 167, 206);
   font-size: 50px;
   text-align: center;
+  padding-bottom: 30px;
 }
 
 form {
+  margin: auto;
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom-style:solid;
@@ -23,16 +25,6 @@ form {
   box-shadow: 0 5px 2px -2px rgb(228, 228, 228);
 }
 
-table {
-  margin: auto;
-  margin-top: 50px; 
-  
-}
-
-header {
-  padding-bottom: 30px;
-}
-
 a {
   padding: 10px;
 }
@@ -40,19 +32,9 @@ a {
 td {
   border-bottom-style:ridge;
   border-color: rgba(10, 108, 255, 0.479);
-  padding-right:30px;
   
 }
-
-.eka {
-  float:left;
-  margin-right: 130px;
-  display:inline;
-  
-
-}
-
-.toka {
-  float:right;
- 
+.things {
+    margin-left: auto;
+    margin-right: auto;
 }
